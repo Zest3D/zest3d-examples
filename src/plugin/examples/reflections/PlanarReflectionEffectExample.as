@@ -138,7 +138,7 @@ package plugin.examples.reflections
 			scene.addChild( _plane1 );
 			scene.addChild( _plane2 );
 			scene.addChild( _mesh );
-			scene.addChild( _lightNode );
+			//scene.addChild( _lightNode );
 			scene.addChild( _particles );
 			
 			scene.rotationY = -45 * ( Math.PI / 180 );
