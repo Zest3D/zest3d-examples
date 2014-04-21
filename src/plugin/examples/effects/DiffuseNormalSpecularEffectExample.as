@@ -1,10 +1,8 @@
 package plugin.examples.effects 
 {
-	import flash.events.MouseEvent;
 	import io.plugin.core.graphics.Color;
 	import io.plugin.math.algebra.APoint;
 	import io.plugin.utils.Stats;
-	import plugin.net.parsers.max3ds.ParserAdapter3DS;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.effects.local.DiffuseNormalSpecularEffect;
 	import zest3d.geometry.SkyboxGeometry;
@@ -13,9 +11,6 @@ package plugin.examples.effects
 	import zest3d.resources.TextureCube;
 	import zest3d.scenegraph.enum.UpdateType;
 	import zest3d.scenegraph.Light;
-	import zest3d.scenegraph.LightNode;
-	import zest3d.scenegraph.Node;
-	import zest3d.scenegraph.TriMesh;
 	
 	/**
 	 * ...
@@ -51,7 +46,6 @@ package plugin.examples.effects
 			var effect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( diffuseMap, normalMap, normalMap, light );
 			
 			var torus:TorusPrimitive = new TorusPrimitive( effect, true, true, true, true );
-			torus.updateModelSpace( UpdateType.USE_TCOORD_CHANNEL );
 			
 			scene.addChild( torus );
 		}
