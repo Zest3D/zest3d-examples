@@ -10,7 +10,7 @@ package plugin.examples.mushroom
 	import io.plugin.core.graphics.Color;
 	import io.plugin.math.algebra.APoint;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.FlatMaterialEffect;
+	import zest3d.localeffects.FlatMaterialEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.resources.Texture2D;

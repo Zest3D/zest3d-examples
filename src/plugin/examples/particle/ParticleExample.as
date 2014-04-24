@@ -3,11 +3,10 @@ package plugin.examples.particle
 	import flash.utils.ByteArray;
 	import io.plugin.math.algebra.APoint;
 	import io.plugin.utils.Stats;
-	import plugin.RandomParticleController;
+	import plugin.examples.particle.helpers.RandomParticleController;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.TextureEffect;
+	import zest3d.localeffects.TextureEffect;
 	import zest3d.geometry.ParticleGeometry;
-	//import zest3d.RandomParticleController;
 	import zest3d.resources.Texture2D;
 	
 	/**
@@ -41,7 +40,7 @@ package plugin.examples.particle
 			
 			_particles = new ParticleGeometry( particleEffect, numParticles, positionSizes );
 			_particles.scaleUniform = 10;
-			// _particles.addController( new RandomParticleController() ); 
+			//_particles.addController( new RandomParticleController() ); 
 			
 			scene.addChild( _particles );
 		}

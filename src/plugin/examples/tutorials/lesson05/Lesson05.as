@@ -2,7 +2,7 @@ package plugin.examples.tutorials.lesson05
 {
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.detail.DlodNode;
-	import zest3d.effects.local.ReflectionEffect;
+	import zest3d.localeffects.ReflectionEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.TextureCube;
@@ -23,9 +23,9 @@ package plugin.examples.tutorials.lesson05
 			
 			skybox = new SkyboxGeometry( skyTexture );
 			
-			var t0:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, 128, 64 );
-			var t1:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, 16, 8 );
-			var t2:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, 10, 5 );
+			var t0:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, false, false, 128, 64 );
+			var t1:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, false, false, 16, 8 );
+			var t2:TorusPrimitive = new TorusPrimitive( reflectionEffect, false, true, false, false, 10, 5 );
 			
 			var dlod:DlodNode = new DlodNode( 3 );
 			dlod.addChild( t0 );

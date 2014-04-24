@@ -5,7 +5,7 @@ package plugin.examples.parsers
 	import io.plugin.utils.Stats;
 	import plugin.net.parsers.max3ds.ParserAdapter3DS;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.resources.Texture2D;
 	import zest3d.resources.TextureCube;
@@ -46,7 +46,7 @@ package plugin.examples.parsers
 			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
 			var phongEffect: PhongEffect = new PhongEffect( spaceTexture, light );
 			
-			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS(), true, true );
+			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS(), true, true, false, false );
 			parser.parse();
 			
 			_dancer = parser.getMeshAt( 0 );

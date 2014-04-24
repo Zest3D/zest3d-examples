@@ -3,8 +3,8 @@ package plugin.examples.tutorials.lesson04
 	import flash.events.MouseEvent;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.detail.BillboardNode;
-	import zest3d.effects.local.ReflectionEffect;
-	import zest3d.effects.local.TextureEffect;
+	import zest3d.localeffects.ReflectionEffect;
+	import zest3d.localeffects.TextureEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.PlanePrimitive;
 	import zest3d.resources.Texture2D;

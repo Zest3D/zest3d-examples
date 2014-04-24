@@ -3,7 +3,7 @@ package plugin.examples.effects
 	import io.plugin.core.graphics.Color;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.FlatMaterialEffect;
+	import zest3d.localeffects.FlatMaterialEffect;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.scenegraph.Material;
 	

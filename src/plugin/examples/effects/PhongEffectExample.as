@@ -4,7 +4,7 @@ package plugin.examples.effects
 	import io.plugin.math.algebra.APoint;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.Texture2D;
 	import zest3d.scenegraph.Light;
@@ -36,7 +36,7 @@ package plugin.examples.effects
 			
 			var effect:PhongEffect = new PhongEffect( checkedTexture, light );
 			
-			_torus = new TorusPrimitive( effect, true, true, 128, 64 );
+			_torus = new TorusPrimitive( effect, true, true, false, false, 128, 64 );
 			scene.addChild( _torus );
 		}
 		

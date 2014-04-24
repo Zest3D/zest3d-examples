@@ -4,9 +4,9 @@ package plugin.examples.tutorials.lesson07
 	import io.plugin.math.algebra.APoint;
 	import plugin.net.parsers.max3ds.ParserAdapter3DS;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.GlassEffect;
-	import zest3d.effects.local.SkyboxEffect;
-	import zest3d.effects.local.TextureEffect;
+	import zest3d.localeffects.GlassEffect;
+	import zest3d.localeffects.SkyboxEffect;
+	import zest3d.localeffects.TextureEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.resources.Texture2D;
 	import zest3d.resources.TextureCube;

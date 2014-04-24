@@ -3,7 +3,7 @@ package plugin.examples.buffers.depth
 	import io.plugin.math.algebra.APoint;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.DepthEffect;
+	import zest3d.localeffects.DepthEffect;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.PlanePrimitive;
 	
@@ -32,12 +32,12 @@ package plugin.examples.buffers.depth
 			var cube2:CubePrimitive = new CubePrimitive( depthEffect, false, false );
 			scene.addChild( cube2 );
 			
-			var plane0:PlanePrimitive = new PlanePrimitive( depthEffect, false, false, 2, 2, 10000, 10000 );
+			var plane0:PlanePrimitive = new PlanePrimitive( depthEffect, false, false, false, false, 2, 2, 10000, 10000 );
 			plane0.rotationX = 90 * (Math.PI / 180 );
 			plane0.y = 3;
 			scene.addChild( plane0 );
 			
-			var plane1:PlanePrimitive = new PlanePrimitive( depthEffect, false, false, 2, 2, 10000, 10000 );
+			var plane1:PlanePrimitive = new PlanePrimitive( depthEffect, false, false, false, false, 2, 2, 10000, 10000 );
 			plane1.rotationX = 270 * (Math.PI / 180 );
 			plane1.y = -3;
 			scene.addChild( plane1 );

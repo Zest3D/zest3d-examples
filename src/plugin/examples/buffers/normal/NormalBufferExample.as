@@ -3,7 +3,7 @@ package plugin.examples.buffers.normal
 	import io.plugin.core.graphics.Color;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.NormalEffect;
+	import zest3d.localeffects.NormalEffect;
 	import zest3d.primitives.PlanePrimitive;
 	import zest3d.primitives.TorusPrimitive;
 	
@@ -26,23 +26,23 @@ package plugin.examples.buffers.normal
 			
 			var normalEffect:NormalEffect = new NormalEffect();
 			
-			_torus0 = new TorusPrimitive( normalEffect, false, true, 64, 32 );
+			_torus0 = new TorusPrimitive( normalEffect, false, true, false, false, 64, 32 );
 			_torus0.x = -3
 			scene.addChild( _torus0 );
 			
-			_torus1 = new TorusPrimitive( normalEffect, false, true, 64, 32 );
+			_torus1 = new TorusPrimitive( normalEffect, false, true, false, false, 64, 32 );
 			scene.addChild( _torus1 );
 			
-			_torus2 = new TorusPrimitive( normalEffect, false, true, 64, 32 );
+			_torus2 = new TorusPrimitive( normalEffect, false, true, false, false, 64, 32 );
 			_torus2.x = 3
 			scene.addChild( _torus2 );
 			
-			var plane0:PlanePrimitive = new PlanePrimitive( normalEffect, false, true, 2, 2, 5, 5 );
+			var plane0:PlanePrimitive = new PlanePrimitive( normalEffect, false, true, false, false, 2, 2, 5, 5 );
 			plane0.rotationX = 90 * (Math.PI / 180 );
 			plane0.y = 3;
 			scene.addChild( plane0 );
 			
-			var plane1:PlanePrimitive = new PlanePrimitive( normalEffect, false, true, 2, 2, 5, 5 );
+			var plane1:PlanePrimitive = new PlanePrimitive( normalEffect, false, true, false, false, 2, 2, 5, 5 );
 			plane1.rotationX = 270 * (Math.PI / 180 );
 			plane1.y = -3;
 			scene.addChild( plane1 );

@@ -11,7 +11,7 @@ package plugin.examples.oimo
 	import plugin.examples.oimo.helpers.OimoMesh3D;
 	import plugin.examples.oimo.helpers.Zest3DOimoWorld;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.CylinderPrimitive;
@@ -68,7 +68,7 @@ package plugin.examples.oimo
 			_oimoWorld = new Zest3DOimoWorld( 30 );
 			
 			// Add Ground
-			var plane:CubePrimitive = new CubePrimitive( spaceEffect, true, true, 10, 10, 10 );
+			var plane:CubePrimitive = new CubePrimitive( spaceEffect, true, true, false, false, 10, 10, 10 );
 			plane.translate( 0, 10, 0 );
 			plane.culling = CullingType.NEVER;
 			_oimoWorld.addCube( plane, 10, 10, 10, RigidBody.BODY_STATIC );
@@ -78,7 +78,7 @@ package plugin.examples.oimo
 			var i:int;
 			for ( i = 0; i < 100; ++i )
 			{
-				var cube:CubePrimitive = new CubePrimitive( spaceEffect, true, true, 1, 1, 1, false ); 
+				var cube:CubePrimitive = new CubePrimitive( spaceEffect, true, true, false, false, 1, 1, 1, false ); 
 				cube.translate( (Math.random() * 10) - 5, ( -Math.random() * 1500) - 5, (Math.random() * 10) - 5 );
 				scene.addChild( cube );
 				_oimoWorld.addCube( cube, 1, 1, 1);
@@ -87,7 +87,7 @@ package plugin.examples.oimo
 			// Add Spheres
 			for ( i = 0; i < 100; ++i )
 			{
-				var sphere:SpherePrimitive = new SpherePrimitive( spaceEffect, true, true, 16, 16, 1, false, false );
+				var sphere:SpherePrimitive = new SpherePrimitive( spaceEffect, true, true, false, false, 16, 16, 1, false, false );
 				sphere.translate( (Math.random() * 10) - 5, ( -Math.random() * 1500) - 5, (Math.random() * 10) - 5 );
 				scene.addChild( sphere );
 				_oimoWorld.addSphere( sphere, 1 );
@@ -96,7 +96,7 @@ package plugin.examples.oimo
 			// Add Cylinders
 			for ( i = 0; i < 100; ++i )
 			{
-				var cylinder:CylinderPrimitive = new CylinderPrimitive( spaceEffect, true, true, 4, 16, 1, 2, false, false, false );
+				var cylinder:CylinderPrimitive = new CylinderPrimitive( spaceEffect, true, true, false, false, 4, 16, 1, 2, false, false, false );
 				cylinder.translate( (Math.random() * 10) - 5, ( -Math.random() * 1500) - 5, (Math.random() * 10) - 5 );
 				scene.addChild( cylinder );
 				_oimoWorld.addCylinder( cylinder, 1, 2 );

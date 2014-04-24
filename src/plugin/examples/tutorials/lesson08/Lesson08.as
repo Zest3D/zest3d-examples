@@ -9,7 +9,7 @@ package plugin.examples.tutorials.lesson08
 	import zest3d.controllers.enum.RepeatType;
 	import zest3d.controllers.KeyframeController;
 	import zest3d.datatypes.Transform;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.Texture2D;
@@ -47,7 +47,7 @@ package plugin.examples.tutorials.lesson08
 			
 			var phongEffect:PhongEffect = new PhongEffect(checkedTexture, light);
 			
-			var torus:TorusPrimitive = new TorusPrimitive(phongEffect, true, true, 64, 32);
+			var torus:TorusPrimitive = new TorusPrimitive(phongEffect, true, true,false, false, 64, 32);
 			
 			_keyframeController = new KeyframeController( 0, 0, 4, 0, new Transform() );
 			_keyframeController.minTime = 0;

@@ -2,7 +2,7 @@ package plugin.examples.tutorials.lesson06
 {
 	import io.plugin.core.graphics.Color;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.Texture2D;

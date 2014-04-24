@@ -1,11 +1,11 @@
-package plugin.picking 
+package plugin.examples.picking 
 {
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.utils.getTimer;
 	import io.plugin.core.graphics.Color;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.SpherePrimitive;
 	import zest3d.primitives.TorusPrimitive;
@@ -25,10 +25,10 @@ package plugin.picking
 	 */
 	public class PickingExample extends Zest3DApplication 
 	{
-		[Embed(source = "../../assets/atf/bw_checked.atf", mimeType = "application/octet-stream")]
+		[Embed(source = "../../../assets/atf/bw_checked.atf", mimeType = "application/octet-stream")]
 		private const CHECKED_ATF:Class;
 		
-		[Embed(source="../../assets/atfcube/rock_water.atf", mimeType="application/octet-stream")]
+		[Embed(source="../../../assets/atfcube/rock_water.atf", mimeType="application/octet-stream")]
 		private const SKYBOX_ATF:Class;
 		
 		private var _tf:TextField;

@@ -5,7 +5,7 @@ package plugin.examples.effects
 	import io.plugin.utils.Stats;
 	import plugin.net.parsers.max3ds.ParserAdapter3DS;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.CartoonEffect;
+	import zest3d.localeffects.CartoonEffect;
 	import zest3d.resources.Texture2D;
 	import zest3d.scenegraph.enum.LightType;
 	import zest3d.scenegraph.enum.UpdateType;
@@ -36,7 +36,7 @@ package plugin.examples.effects
 			
 			clearColor = new Color( 0, 0, 0 );
 			
-			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS() );
+			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS(), true, true );
 			parser.parse();
 			
 			var checkedTexture: Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );

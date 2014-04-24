@@ -4,7 +4,7 @@ package plugin.examples.effects
 	import io.plugin.math.algebra.APoint;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.LambertEffect;
+	import zest3d.localeffects.LambertEffect;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.Texture2D;
 	import zest3d.scenegraph.enum.LightType;

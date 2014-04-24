@@ -1,11 +1,11 @@
-package plugin.examples.scene 
+package plugin.examples.culling 
 {
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import io.plugin.core.graphics.Color;
 	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.PlanePrimitive;
 	import zest3d.resources.Texture2D;
@@ -14,10 +14,11 @@ package plugin.examples.scene
 	import zest3d.scenegraph.LightNode;
 	
 	/**
-	 * ...
+	 * A test of 400 large geometries being culled to the view frustum. Frustum culling is default behaviour of Zest3D.
+	 * 
 	 * @author Gary Paluk - http://www.plugin.io
 	 */
-	public class RandomBoxScene extends Zest3DApplication 
+	public class FrustumCullingExample extends Zest3DApplication 
 	{
 		
 		[Embed(source="../../../assets/atf/white_gloss.atf", mimeType="application/octet-stream")]
@@ -50,25 +51,25 @@ package plugin.examples.scene
 			var i:int;
 			for ( i = 0; i < 400; ++i )
 			{
-				plane = new PlanePrimitive( effect, true, true, 2, 2, 6, 1 );
+				plane = new PlanePrimitive( effect, true, true, false, false, 2, 2, 6, 1 );
 				plane.rotationY = 90 * (Math.PI / 180 );
 				plane.x = -3;
 				plane.z = 12*i;
 				scene.addChild( plane );
 				
-				plane = new PlanePrimitive( effect, true, true, 2, 2, 3, 6 );
+				plane = new PlanePrimitive( effect, true, true, false, false, 2, 2, 3, 6 );
 				plane.rotationX = 90 * (Math.PI / 180 );
 				plane.y = 1;
 				plane.z = 12*i;
 				scene.addChild( plane );
 				
-				plane = new PlanePrimitive( effect, true, true, 2, 2, 3, 6 );
+				plane = new PlanePrimitive( effect, true, true, false, false, 2, 2, 3, 6 );
 				plane.rotationX = 270 * (Math.PI / 180 );
 				plane.y = -1;
 				plane.z = 12*i;
 				scene.addChild( plane );
 				
-				plane = new PlanePrimitive( effect, true, true, 2, 2, 6, 1 );
+				plane = new PlanePrimitive( effect, true, true, false, false, 2, 2, 6, 1 );
 				plane.rotationY = 270 * (Math.PI / 180 );
 				plane.x = 3;
 				plane.z = 12*i;

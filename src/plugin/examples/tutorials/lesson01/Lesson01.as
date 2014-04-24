@@ -2,7 +2,7 @@ package plugin.examples.tutorials.lesson01
 {
 	import io.plugin.core.interfaces.IDisposable;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.TextureEffect;
+	import zest3d.localeffects.TextureEffect;
 	import zest3d.primitives.TorusPrimitive;
 	import zest3d.resources.Texture2D;
 	

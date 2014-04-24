@@ -5,7 +5,7 @@ package plugin.examples.tutorials.lesson10
 	import io.plugin.math.algebra.APoint;
 	import plugin.examples.oimo.helpers.Zest3DOimoWorld;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.local.PhongEffect;
+	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.CylinderPrimitive;
@@ -46,7 +46,7 @@ package plugin.examples.tutorials.lesson10
 			
 			_oimoWorld = new Zest3DOimoWorld(30);
 			
-			var ground:CubePrimitive = new CubePrimitive(spaceEffect, true, true, 10, 10, 10);
+			var ground:CubePrimitive = new CubePrimitive(spaceEffect, true, true, false, false, 10, 10, 10);
 			ground.translate(0, 10, 0);
 			ground.culling = CullingType.NEVER;
 			scene.addChild(ground);

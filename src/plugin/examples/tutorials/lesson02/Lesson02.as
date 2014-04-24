@@ -8,7 +8,7 @@ package plugin.examples.tutorials.lesson02
 	 * ...
 	 * @author Gary Paluk - http://www.plugin.io
 	 */
-	public class Lesson2 extends Zest3DApplication 
+	public class Lesson02 extends Zest3DApplication 
 	{
 		[Embed(source="../../../../assets/atfcube/skybox.atf", mimeType="application/octet-stream")]
 		private var SKYBOX_ATF:Class;

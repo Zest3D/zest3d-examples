@@ -4,14 +4,13 @@ package plugin.examples.reflections
 	import flash.utils.getTimer;
 	import io.plugin.core.graphics.Color;
 	import io.plugin.math.algebra.APoint;
-	import io.plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.effects.global.PlanarReflectionEffect;
-	import zest3d.effects.local.FlatMaterialEffect;
-	import zest3d.effects.local.PhongEffect;
-	import zest3d.effects.local.TextureEffect;
 	import zest3d.geometry.ParticleGeometry;
 	import zest3d.geometry.SkyboxGeometry;
+	import zest3d.globaleffects.PlanarReflectionEffect;
+	import zest3d.localeffects.FlatMaterialEffect;
+	import zest3d.localeffects.PhongEffect;
+	import zest3d.localeffects.TextureEffect;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.PlanePrimitive;
 	import zest3d.primitives.SpherePrimitive;
@@ -19,7 +18,6 @@ package plugin.examples.reflections
 	import zest3d.resources.TextureCube;
 	import zest3d.scenegraph.Culler;
 	import zest3d.scenegraph.enum.CullingType;
-	import zest3d.scenegraph.enum.LightType;
 	import zest3d.scenegraph.Light;
 	import zest3d.scenegraph.LightNode;
 	import zest3d.scenegraph.Material;
@@ -58,7 +56,7 @@ package plugin.examples.reflections
 		
 		override protected function initialize():void 
 		{
-			//addChild( new Stats() );
+			// addChild( new Stats() );
 			camera.position = new APoint( 0, -2, -7 );
 			clearColor = new Color( 0, 0, 0, 0 );
 			
@@ -81,15 +79,15 @@ package plugin.examples.reflections
 			_sceneCuller = new Culler( _camera );
 			_meshCuller = new Culler( _camera );
 			
-			_plane0 = new PlanePrimitive( phongCheckEffect, true, true, 2, 2, 3, 3, true );
+			_plane0 = new PlanePrimitive( phongCheckEffect, true, true, false, false, 2, 2, 3, 3, true );
 			_plane0.rotationX = 90 * (Math.PI / 180);
 			
-			_plane1 = new PlanePrimitive( phongCheckEffect, true, true, 2, 2, 3, 3, true );
+			_plane1 = new PlanePrimitive( phongCheckEffect, true, true, false, false, 2, 2, 3, 3, true );
 			_plane1.rotationX = 180 * (Math.PI / 180);
 			_plane1.z = 3;
 			_plane1.y = -3;
 			
-			_plane2 = new PlanePrimitive( phongCheckEffect, true, true, 2, 2, 3, 3, true );
+			_plane2 = new PlanePrimitive( phongCheckEffect, true, true, false, false, 2, 2, 3, 3, true );
 			_plane2.rotationY = 270 * (Math.PI / 180);
 			_plane2.x = 3;
 			_plane2.y = -3;
@@ -98,7 +96,7 @@ package plugin.examples.reflections
 			material.ambient = Color.fromHexRGB( 0xFFFFFF );
 			var flatMaterialEffect:FlatMaterialEffect = new FlatMaterialEffect( material );
 			
-			var lightSphere:SpherePrimitive = new SpherePrimitive( flatMaterialEffect, false, false, 16, 16, 0.2 );	
+			var lightSphere:SpherePrimitive = new SpherePrimitive( flatMaterialEffect, false, false, false, false, 16, 16, 0.2 );	
 			
 			_mesh = new CubePrimitive( phongCheckEffect, true, true );
 			_mesh.effect = phongSpaceEffect;
@@ -132,13 +130,10 @@ package plugin.examples.reflections
 			_particles = new ParticleGeometry( particleEffect, numParticles, positionSizes );
 			_particles.scaleUniform = 20;
 			
-			// _particles.addController( new RandomParticleController() );
-			
 			scene.addChild( _plane0 );
 			scene.addChild( _plane1 );
 			scene.addChild( _plane2 );
 			scene.addChild( _mesh );
-			//scene.addChild( _lightNode );
 			scene.addChild( _particles );
 			
 			scene.rotationY = -45 * ( Math.PI / 180 );
@@ -174,7 +169,7 @@ package plugin.examples.reflections
 				{
 					skybox.position = _camera.position;
 					skybox.update();
-					this._renderer.drawVisual( skybox );
+					_renderer.drawVisual( skybox );
 				}
 				if ( _particles )
 				{
