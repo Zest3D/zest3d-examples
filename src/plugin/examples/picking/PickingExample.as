@@ -12,6 +12,7 @@ package plugin.examples.picking
 	import zest3d.resources.Texture2D;
 	import zest3d.resources.TextureCube;
 	import zest3d.scenegraph.enum.CullingType;
+	import zest3d.scenegraph.enum.UpdateType;
 	import zest3d.scenegraph.Light;
 	import zest3d.scenegraph.LightNode;
 	import zest3d.scenegraph.PickRecord;
@@ -61,34 +62,34 @@ package plugin.examples.picking
 			lightNode.z = -5
 			
 			var phongEffect:PhongEffect = new PhongEffect( checkedTexture, light );
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF()) );
-			skybox.name = "skybox";
+			//skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF()) );
+			//skybox.name = "skybox";
 			
 			_mesh1 = new TorusPrimitive( phongEffect, true, true );
-			_mesh1.culling = CullingType.NEVER;
+			//_mesh1.culling = CullingType.NEVER;
 			_mesh1.name = "Torus_1";
 			
 			_mesh2 = new TorusPrimitive( phongEffect, true, true );
-			_mesh2.culling = CullingType.NEVER;
+			//_mesh2.culling = CullingType.NEVER;
 			_mesh2.name = "Torus_2";
 			
 			_mesh3 = new TorusPrimitive( phongEffect, true, true );
-			_mesh3.culling = CullingType.NEVER;
+			//_mesh3.culling = CullingType.NEVER;
 			_mesh3.name = "Torus_3";
 			
 			_mesh4 = new SpherePrimitive( phongEffect, true, true );
-			_mesh4.culling = CullingType.NEVER;
+			//_mesh4.culling = CullingType.NEVER;
 			_mesh4.name = "Sphere_1";
 			
 			scene.addChild( _mesh1 );
 			scene.addChild( _mesh2 );
-			scene.addChild( _mesh3 );
-			scene.addChild( _mesh4 );
+			//scene.addChild( _mesh3 );
+			//scene.addChild( _mesh4 );
 			
-			_mesh1.translate( -2.5, -1.5, 0 );
+			_mesh1.translate( -2.5, -1.5, 0 );			
 			_mesh2.translate(  2.5, -1.5, 0 );
-			_mesh3.translate(  2.5,  1.5, 0 );
-			_mesh4.translate( -2.5,  1.5, 0 );
+			//_mesh3.translate(  2.5,  1.5, 0 );
+			//_mesh4.translate( -2.5,  1.5, 0 );
 			
 			scene.addChild( lightNode );
 		}
