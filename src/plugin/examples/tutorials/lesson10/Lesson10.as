@@ -1,8 +1,8 @@
 package plugin.examples.tutorials.lesson10 
 {
 	import com.element.oimo.physics.dynamics.RigidBody;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
 	import plugin.examples.oimo.helpers.Zest3DOimoWorld;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.PhongEffect;

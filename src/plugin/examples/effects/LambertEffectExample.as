@@ -1,8 +1,8 @@
 package plugin.examples.effects 
 {
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.utils.Stats;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.LambertEffect;
 	import zest3d.primitives.TorusPrimitive;

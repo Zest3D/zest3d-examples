@@ -2,13 +2,13 @@ package plugin.examples.reflections
 {
 	import flash.utils.ByteArray;
 	import flash.utils.getTimer;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.geometry.ParticleGeometry;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.globaleffects.PlanarReflectionEffect;
-	import zest3d.localeffects.FlatMaterialEffect;
+	import zest3d.localeffects.ColorMaterialEffect;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.localeffects.TextureEffect;
 	import zest3d.primitives.CubePrimitive;
@@ -94,7 +94,7 @@ package plugin.examples.reflections
 			
 			var material:Material = new Material();
 			material.ambient = Color.fromHexRGB( 0xFFFFFF );
-			var flatMaterialEffect:FlatMaterialEffect = new FlatMaterialEffect( material );
+			var flatMaterialEffect:ColorMaterialEffect = new ColorMaterialEffect( material );
 			
 			var lightSphere:SpherePrimitive = new SpherePrimitive( flatMaterialEffect, false, false, false, false, 16, 16, 0.2 );	
 			

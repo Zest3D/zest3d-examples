@@ -1,7 +1,7 @@
 package plugin.examples.billboard 
 {
 	import flash.events.MouseEvent;
-	import io.plugin.utils.Stats;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.detail.BillboardNode;
 	import zest3d.localeffects.ReflectionEffect;

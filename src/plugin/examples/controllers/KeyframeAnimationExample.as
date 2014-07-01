@@ -2,13 +2,13 @@ package plugin.examples.controllers
 {
 	import flash.utils.ByteArray;
 	import flash.utils.Endian;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.core.interfaces.IDisposable;
-	import io.plugin.core.system.Assert;
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.math.algebra.HMatrix;
-	import io.plugin.math.algebra.HQuaternion;
-	import io.plugin.utils.Stats;
+	import plugin.core.graphics.Color;
+	import plugin.core.interfaces.IDisposable;
+	import plugin.core.system.Assert;
+	import plugin.math.algebra.APoint;
+	import plugin.math.algebra.HMatrix;
+	import plugin.math.algebra.HQuaternion;
+	import plugin.utils.Stats;
 	import zest3d.applications.AGALApplication;
 	import zest3d.applications.Game;
 	import zest3d.applications.Zest3DApplication;
@@ -32,7 +32,7 @@ package plugin.examples.controllers
 	 * ...
 	 * @author Gary Paluk
 	 */
-	public class KeyframeAnimationTest extends Zest3DApplication//Game //implements IDisposable 
+	public class KeyframeAnimationExample extends Zest3DApplication//Game //implements IDisposable 
 	{
 		
 		[Embed(source="../../../assets/atfcube/skybox.atf", mimeType="application/octet-stream")]

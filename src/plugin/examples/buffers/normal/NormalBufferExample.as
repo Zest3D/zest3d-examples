@@ -1,7 +1,7 @@
 package plugin.examples.buffers.normal 
 {
-	import io.plugin.core.graphics.Color;
-	import io.plugin.utils.Stats;
+	import plugin.core.graphics.Color;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.NormalEffect;
 	import zest3d.primitives.PlanePrimitive;

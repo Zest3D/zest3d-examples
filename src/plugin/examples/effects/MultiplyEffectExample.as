@@ -1,6 +1,6 @@
 package plugin.examples.effects 
 {
-	import io.plugin.core.interfaces.IDisposable;
+	import plugin.core.interfaces.IDisposable;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.MultiplyEffect;
 	import zest3d.primitives.PlanePrimitive;

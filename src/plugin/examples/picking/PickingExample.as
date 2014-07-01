@@ -3,7 +3,7 @@ package plugin.examples.picking
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.utils.getTimer;
-	import io.plugin.core.graphics.Color;
+	import plugin.core.graphics.Color;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;

@@ -6,8 +6,8 @@ package plugin.examples.oimo.helpers
 	import com.element.oimo.physics.collision.shape.SphereShape;
 	import com.element.oimo.physics.dynamics.RigidBody;
 	import com.element.oimo.physics.dynamics.World;
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.math.algebra.HMatrix;
+	import plugin.math.algebra.APoint;
+	import plugin.math.algebra.HMatrix;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.CylinderPrimitive;
 	import zest3d.primitives.SpherePrimitive;

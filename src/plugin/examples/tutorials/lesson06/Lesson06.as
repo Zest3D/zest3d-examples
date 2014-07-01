@@ -1,6 +1,6 @@
 package plugin.examples.tutorials.lesson06 
 {
-	import io.plugin.core.graphics.Color;
+	import plugin.core.graphics.Color;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;

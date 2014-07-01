@@ -1,7 +1,7 @@
 package plugin.examples.buffers.depth 
 {
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.utils.Stats;
+	import plugin.math.algebra.APoint;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.DepthEffect;
 	import zest3d.primitives.CubePrimitive;

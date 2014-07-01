@@ -1,7 +1,7 @@
 package plugin.examples.particle.helpers
 {
 	import flash.utils.ByteArray;
-	import io.plugin.core.interfaces.IDisposable;
+	import plugin.core.interfaces.IDisposable;
 	import zest3d.controllers.ParticleController;
 	import zest3d.renderers.Renderer;
 	import zest3d.scenegraph.Particles;

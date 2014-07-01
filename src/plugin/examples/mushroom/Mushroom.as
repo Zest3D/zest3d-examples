@@ -7,10 +7,10 @@ package plugin.examples.mushroom
 	import flash.media.SoundChannel;
 	import flash.net.navigateToURL;
 	import flash.net.URLRequest;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
 	import zest3d.applications.Zest3DApplication;
-	import zest3d.localeffects.FlatMaterialEffect;
+	import zest3d.localeffects.ColorMaterialEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.resources.Texture2D;
@@ -80,7 +80,7 @@ package plugin.examples.mushroom
 			{
 				var material:Material = new Material();
 				material.ambient =  _colors[c];
-				_effects[c]= new FlatMaterialEffect( material );
+				_effects[c]= new ColorMaterialEffect( material );
 			}
 		   
 			_models = [];

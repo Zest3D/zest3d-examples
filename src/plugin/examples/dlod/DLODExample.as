@@ -1,6 +1,6 @@
 package plugin.examples.dlod 
 {
-	import io.plugin.utils.Stats;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.detail.DlodNode;
 	import zest3d.localeffects.ReflectionEffect;

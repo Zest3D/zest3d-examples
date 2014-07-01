@@ -1,7 +1,7 @@
 package plugin.examples.tutorials.lesson07 
 {
 	import flash.display3D.textures.Texture;
-	import io.plugin.math.algebra.APoint;
+	import plugin.math.algebra.APoint;
 	import plugin.net.parsers.max3ds.ParserAdapter3DS;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.GlassEffect;

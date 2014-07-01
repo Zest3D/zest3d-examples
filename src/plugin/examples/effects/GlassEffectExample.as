@@ -1,6 +1,6 @@
 package plugin.examples.effects 
 {
-	import io.plugin.utils.Stats;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.GlassEffect;
 	import zest3d.geometry.SkyboxGeometry;

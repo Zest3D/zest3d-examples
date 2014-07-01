@@ -3,7 +3,7 @@ package plugin.examples.oimo.helpers
 	import com.element.oimo.physics.collision.shape.Shape;
 	import com.element.oimo.physics.collision.shape.ShapeConfig;
 	import com.element.oimo.physics.dynamics.RigidBody;
-	import io.plugin.math.algebra.AVector;
+	import plugin.math.algebra.AVector;
 	import zest3d.scenegraph.TriMesh;
 	
 	public class OimoMesh3D

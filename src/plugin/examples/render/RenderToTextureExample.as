@@ -1,7 +1,7 @@
 package plugin.examples.render 
 {
-	import io.plugin.core.graphics.Color;
-	import io.plugin.core.interfaces.IDisposable;
+	import plugin.core.graphics.Color;
+	import plugin.core.interfaces.IDisposable;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.TextureEffect;
 	import zest3d.primitives.CubePrimitive;

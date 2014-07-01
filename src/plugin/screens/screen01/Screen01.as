@@ -1,7 +1,7 @@
 package plugin.screens.screen01 
 {
 	import flash.utils.ByteArray;
-	import io.plugin.math.algebra.APoint;
+	import plugin.math.algebra.APoint;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.TextureEffect;
 	import zest3d.geometry.ParticleGeometry;

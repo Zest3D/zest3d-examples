@@ -2,8 +2,8 @@ package plugin.examples.culling
 {
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.utils.Stats;
+	import plugin.core.graphics.Color;
+	import plugin.utils.Stats;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.primitives.CubePrimitive;

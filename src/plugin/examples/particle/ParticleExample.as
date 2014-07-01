@@ -1,8 +1,8 @@
 package plugin.examples.particle 
 {
 	import flash.utils.ByteArray;
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.utils.Stats;
+	import plugin.math.algebra.APoint;
+	import plugin.utils.Stats;
 	import plugin.examples.particle.helpers.RandomParticleController;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.TextureEffect;

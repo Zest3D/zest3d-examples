@@ -1,6 +1,6 @@
 package plugin.screens.screen03 
 {
-	import io.plugin.core.graphics.Color;
+	import plugin.core.graphics.Color;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.CartoonEffect;
 	import zest3d.localeffects.GlassEffect;

@@ -1,7 +1,7 @@
 package plugin.screens.screen02 
 {
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.localeffects.TextureEffect;

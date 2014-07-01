@@ -5,9 +5,9 @@ package plugin.examples.oimo
 	import com.element.oimo.physics.collision.shape.ShapeConfig;
 	import com.element.oimo.physics.collision.shape.SphereShape;
 	import com.element.oimo.physics.dynamics.RigidBody;
-	import io.plugin.core.graphics.Color;
-	import io.plugin.math.algebra.APoint;
-	import io.plugin.utils.Stats;
+	import plugin.core.graphics.Color;
+	import plugin.math.algebra.APoint;
+	import plugin.utils.Stats;
 	import plugin.examples.oimo.helpers.OimoMesh3D;
 	import plugin.examples.oimo.helpers.Zest3DOimoWorld;
 	import zest3d.applications.Zest3DApplication;
