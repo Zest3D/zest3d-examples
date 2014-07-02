@@ -34,7 +34,7 @@ package plugin.examples.bullet
 			camera.position = new APoint( 0, -200, -400 );
 			camera.setFrustumFOV( 80, stage.stageWidth / stage.stageHeight, 0.1, 2000 );
 			
-			bwCheckedTexture = Texture2D.fromByteArray( new BW_CHECKED_ATF() );
+			bwCheckedTexture = Texture2D.fromATFData( new BW_CHECKED_ATF() );
 			effect = new TextureEffect(bwCheckedTexture);
 			
 			world = BulletDynamicsWorld.getInstance();

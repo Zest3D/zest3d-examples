@@ -43,7 +43,7 @@ package plugin.examples.mushroom
 		
 		override protected function initialize():void 
 		{
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF() ) );
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new SKYBOX_ATF() ) );
 			
 			camera.position = new APoint( 0, 0, -80 );
 			clearColor = new Color( 0.2, 0.2, 0.2 );
@@ -73,7 +73,7 @@ package plugin.examples.mushroom
 			_data[14] = [0, 0, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0];
 			_data[15] = [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0];
 		   
-			var texture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
+			var texture:Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
 			
 			_effects = [];
 			for ( var c:int = 0; c < _colors.length; ++c )

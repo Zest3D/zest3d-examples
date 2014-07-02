@@ -68,7 +68,7 @@ package plugin.examples.effects
 			
 			addChild( new Stats() );
 			
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new skyboxATF() ) );
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new skyboxATF() ) );
 			
 			var light:Light = new Light();
 			light.position = new APoint( 100, -50, -100 );
@@ -91,24 +91,24 @@ package plugin.examples.effects
 			var parserAdapter:ParserAdapter3DS = new ParserAdapter3DS( new ff3DS(), true, true, true, true );
 			parserAdapter.parse();
 			
-			var eyeDiffuse:Texture2D = Texture2D.fromByteArray( new eyeDiffATF() );
-			var eyeNormal:Texture2D = Texture2D.fromByteArray( new eyeNormATF() );
+			var eyeDiffuse:Texture2D = Texture2D.fromATFData( new eyeDiffATF() );
+			var eyeNormal:Texture2D = Texture2D.fromATFData( new eyeNormATF() );
 			var eyeEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( eyeDiffuse, eyeNormal, eyeNormal, light );
 			
-			var eyelashDiffuse:Texture2D = Texture2D.fromByteArray( new eyelashDiffATF() );
-			var eyelashNormal:Texture2D = Texture2D.fromByteArray( new eyelashNormATF() );
+			var eyelashDiffuse:Texture2D = Texture2D.fromATFData( new eyelashDiffATF() );
+			var eyelashNormal:Texture2D = Texture2D.fromATFData( new eyelashNormATF() );
 			var eyelashEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( eyelashDiffuse, eyelashNormal, eyeNormal, light );
 			
-			var mouthDiffuse:Texture2D = Texture2D.fromByteArray( new mouthDiffATF() );
-			var mouthNormal:Texture2D = Texture2D.fromByteArray( new mouthNormATF() );
+			var mouthDiffuse:Texture2D = Texture2D.fromATFData( new mouthDiffATF() );
+			var mouthNormal:Texture2D = Texture2D.fromATFData( new mouthNormATF() );
 			var mouthEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( mouthDiffuse, mouthNormal, eyeNormal, light );
 			
-			var hairDiffuse:Texture2D = Texture2D.fromByteArray( new hairDiffATF() );
-			var hairNormal:Texture2D = Texture2D.fromByteArray( new hairNormATF() );
+			var hairDiffuse:Texture2D = Texture2D.fromATFData( new hairDiffATF() );
+			var hairNormal:Texture2D = Texture2D.fromATFData( new hairNormATF() );
 			var hairEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( hairDiffuse, hairNormal, eyeNormal, light3 );
 			
-			var vesDiffuse:Texture2D = Texture2D.fromByteArray( new vesMainDiffATF() );
-			var vesNormal:Texture2D = Texture2D.fromByteArray( new vesMainNormATF() );
+			var vesDiffuse:Texture2D = Texture2D.fromATFData( new vesMainDiffATF() );
+			var vesNormal:Texture2D = Texture2D.fromATFData( new vesMainNormATF() );
 			var vesEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( vesDiffuse, vesNormal, eyeNormal, light );
 			
 			var skinEffect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( vesDiffuse, vesNormal, eyeNormal, light2 );

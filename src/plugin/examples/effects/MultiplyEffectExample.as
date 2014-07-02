@@ -29,8 +29,8 @@ package plugin.examples.effects
 		override protected function initialize():void 
 		{
 			
-			var stripesTexture:Texture2D = Texture2D.fromByteArray( new STRIPES_ATF() );
-			var space2Texture:Texture2D = Texture2D.fromByteArray( new SPACE2_ATF() );
+			var stripesTexture:Texture2D = Texture2D.fromATFData( new STRIPES_ATF() );
+			var space2Texture:Texture2D = Texture2D.fromATFData( new SPACE2_ATF() );
 			
 			var effect:MultiplyEffect = new MultiplyEffect( stripesTexture, space2Texture );
 			

@@ -52,7 +52,7 @@ package plugin.examples.oimo
 			clearColor = new Color( 0, 0, 0, 1 );
 			
 			// create texture and effect
-			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
+			var spaceTexture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
 			
 			var light:Light = new Light();
 			light.position = new APoint( 0, -10, -80 );
@@ -62,7 +62,7 @@ package plugin.examples.oimo
 			
 			var spaceEffect:PhongEffect = new PhongEffect( spaceTexture, light );
 			
-			var skyboxTexture:TextureCube = TextureCube.fromByteArray( new SkyboxTexture() );
+			var skyboxTexture:TextureCube = TextureCube.fromATFData( new SkyboxTexture() );
 			
 			// Oimo
 			_oimoWorld = new Zest3DOimoWorld( 30 );

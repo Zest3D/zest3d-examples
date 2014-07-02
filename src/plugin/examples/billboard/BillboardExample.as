@@ -30,11 +30,11 @@ package plugin.examples.billboard
 		{
 			addChild( new Stats() );
 			
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SkyboxATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SkyboxATF() );
 			var reflectionEffect:ReflectionEffect = new ReflectionEffect( skyTexture );
 			skybox = new SkyboxGeometry( skyTexture );
 			
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CheckedATF() );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CheckedATF() );
 			var texture2DEffect:TextureEffect = new TextureEffect( checkedTexture );
 			var plane:PlanePrimitive = new PlanePrimitive( texture2DEffect, true, false );
 			

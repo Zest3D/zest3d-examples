@@ -32,8 +32,8 @@ package plugin.examples.tutorials.lesson08
 		private var _keyframeController:KeyframeController;
 		override protected function initialize():void 
 		{
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF() ) );
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new SKYBOX_ATF() ) );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
 			
 			var light:Light = new Light();
 			light.ambient = new Color( 0.2, 0.2, 0.2 );

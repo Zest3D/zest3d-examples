@@ -60,9 +60,9 @@ package plugin.examples.reflections
 			camera.position = new APoint( 0, -2, -7 );
 			clearColor = new Color( 0, 0, 0, 0 );
 			
-			var bwCheckedTexture:Texture2D = Texture2D.fromByteArray( new BW_CHECKED_ATF() );
-			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
-			var bwStripedTexture:TextureCube = TextureCube.fromByteArray( new BW_STRIPES_ATF() );
+			var bwCheckedTexture:Texture2D = Texture2D.fromATFData( new BW_CHECKED_ATF() );
+			var spaceTexture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
+			var bwStripedTexture:TextureCube = TextureCube.fromATFData( new BW_STRIPES_ATF() );
 			
 			var light:Light = new Light();
 			light.ambient = new Color( 0.2, 0.2, 0.2 );
@@ -114,7 +114,7 @@ package plugin.examples.reflections
 			
 			_lightNode.addChild( lightSphere );
 			
-			var particleTexture:Texture2D = Texture2D.fromByteArray( new PARTICLE_ATF() );
+			var particleTexture:Texture2D = Texture2D.fromATFData( new PARTICLE_ATF() );
 			var particleEffect:TextureEffect = new TextureEffect( particleTexture );
 			
 			var numParticles:int = 500;

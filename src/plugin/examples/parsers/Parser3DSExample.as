@@ -34,7 +34,7 @@ package plugin.examples.parsers
 		{
 			addChild( new Stats() );
 			
-			var skyboxTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
+			var skyboxTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			skybox = new SkyboxGeometry( skyboxTexture );
 			
 			var light:Light = new Light( LightType.AMBIENT );
@@ -43,7 +43,7 @@ package plugin.examples.parsers
 			light.exponent = 20;
 			light.ambient = Color.fromHexRGB( 0x785946 )
 			
-			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
+			var spaceTexture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
 			var phongEffect: PhongEffect = new PhongEffect( spaceTexture, light );
 			
 			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS(), true, true, false, false );

@@ -31,7 +31,7 @@ package plugin.examples.effects
 		{
 			addChild( new Stats() );
 			
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new skyboxATF() ) );
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new skyboxATF() ) );
 			
 			var light:Light = new Light();
 			light.position = new APoint( 100, -50, -100 );
@@ -39,8 +39,8 @@ package plugin.examples.effects
 			light.specular = new Color( 0.15, 0.15, 0.3 );
 			light.exponent = 50;
 			
-			var diffuseMap:Texture2D = Texture2D.fromByteArray( new diffuseATF() );
-			var normalMap:Texture2D = Texture2D.fromByteArray( new normalATF() ); // TODO add specular map
+			var diffuseMap:Texture2D = Texture2D.fromATFData( new diffuseATF() );
+			var normalMap:Texture2D = Texture2D.fromATFData( new normalATF() ); // TODO add specular map
 			
 			var effect:DiffuseNormalSpecularEffect = new DiffuseNormalSpecularEffect( diffuseMap, normalMap, normalMap, light );
 			

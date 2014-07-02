@@ -24,8 +24,8 @@ package plugin.examples.tutorials.lesson06
 		
 		override protected function initialize():void 
 		{
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
-			var woodTexture:Texture2D = Texture2D.fromByteArray(new WOOD_ATF());
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
+			var woodTexture:Texture2D = Texture2D.fromATFData(new WOOD_ATF());
 			
 			skybox = new SkyboxGeometry( skyTexture );
 			

@@ -25,8 +25,8 @@ package plugin.screens.screen02
 		
 		override protected function initialize():void 
 		{
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
 			
 			var textureEffect:TextureEffect = new TextureEffect( checkedTexture );
 			

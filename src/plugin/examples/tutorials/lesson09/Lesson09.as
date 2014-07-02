@@ -24,9 +24,9 @@ package plugin.examples.tutorials.lesson09
 		private var _particles:ParticleGeometry;
 		override protected function initialize():void 
 		{
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF() ));
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new SKYBOX_ATF() ));
 			
-			var particleTexture:Texture2D = Texture2D.fromByteArray( new PARTICLE_ATF() );
+			var particleTexture:Texture2D = Texture2D.fromATFData( new PARTICLE_ATF() );
 			var particleEffect:TextureEffect = new TextureEffect( particleTexture );
 			
 			var numParticles:int = 500;

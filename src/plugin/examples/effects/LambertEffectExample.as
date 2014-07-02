@@ -25,7 +25,7 @@ package plugin.examples.effects
 			addChild( new Stats() );
 			clearColor = new Color( .8, .2, .3 );
 			
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATD() );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CHECKED_ATD() );
 			
 			var light:Light = new Light();
 			light.position = new APoint( 10, 0, -10 );

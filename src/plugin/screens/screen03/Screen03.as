@@ -40,10 +40,10 @@ package plugin.screens.screen03
 		{
 			clearColor = new Color( 0, 0, 0 );
 			
-			var checkedTexture: Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
-			var gradientTexture: Texture2D = Texture2D.fromByteArray( new GRADIENT_ATF() );
-			var rockWaterTexture: TextureCube = TextureCube.fromByteArray( new ROCK_WATER_ATF() );
-			var woodTexture:Texture2D = Texture2D.fromByteArray( new WOOD_ATF() );
+			var checkedTexture: Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
+			var gradientTexture: Texture2D = Texture2D.fromATFData( new GRADIENT_ATF() );
+			var rockWaterTexture: TextureCube = TextureCube.fromATFData( new ROCK_WATER_ATF() );
+			var woodTexture:Texture2D = Texture2D.fromATFData( new WOOD_ATF() );
 			
 			var light:Light = new Light( LightType.POINT );
 			light.ambient = new Color( 0.1, 0.1, 0.1 );

@@ -25,7 +25,7 @@ package plugin.examples.dlod
 		{
 			addChild( new Stats() );
 			
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SkyboxATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SkyboxATF() );
 			var reflectionEffect:ReflectionEffect = new ReflectionEffect( skyTexture );
 			
 			skybox = new SkyboxGeometry( skyTexture );

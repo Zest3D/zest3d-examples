@@ -541,7 +541,7 @@ package plugin.examples.controllers
 			mesh.name = name;
 			mesh.addController( skinController );
 			
-			var texture: TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
+			var texture: TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			mesh.effect = new ReflectionEffect( texture );
 			
 			//skybox = new SkyboxGeometry( texture );

@@ -31,7 +31,7 @@ package plugin.examples.buffers.albedo
 			
 			camera.position = new APoint( 0, 0, -10 );
 			
-			var texture2D:Texture2D = Texture2D.fromByteArray( new SpaceATF() );
+			var texture2D:Texture2D = Texture2D.fromATFData( new SpaceATF() );
 			var texture2DEffect:TextureEffect = new TextureEffect( texture2D );
 			
 			_torus0 = new TorusPrimitive( texture2DEffect, true, false, false, false, 64, 32 );

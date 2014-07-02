@@ -44,7 +44,7 @@ package plugin.examples.culling
 			
 			scene.addChild( _lightNode );
 			
-			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
+			var spaceTexture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
 			var effect:PhongEffect = new PhongEffect( spaceTexture, light );
 			var cube:CubePrimitive;
 			var plane:PlanePrimitive;

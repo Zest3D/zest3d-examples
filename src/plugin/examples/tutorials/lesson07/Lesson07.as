@@ -29,7 +29,7 @@ package plugin.examples.tutorials.lesson07
 		override protected function initialize():void 
 		{
 			camera.position = new APoint( 0, -0.4, -0.6 );
-			var skyboxTexture:TextureCube = TextureCube.fromByteArray(new SKYBOX_ATF());
+			var skyboxTexture:TextureCube = TextureCube.fromATFData(new SKYBOX_ATF());
 			skybox = new SkyboxGeometry(skyboxTexture);
 			
 			var glassEffect:GlassEffect = new GlassEffect(skyboxTexture);

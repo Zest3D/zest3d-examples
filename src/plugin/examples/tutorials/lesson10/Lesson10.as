@@ -32,7 +32,7 @@ package plugin.examples.tutorials.lesson10
 		{
 			camera.position = new APoint( 0, -6, -30 );
 			
-			var spaceTexture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
+			var spaceTexture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
 			
 			var light:Light = new Light();
 			light.position = new APoint( 0, -10, -80 );
@@ -42,7 +42,7 @@ package plugin.examples.tutorials.lesson10
 			
 			var spaceEffect:PhongEffect = new PhongEffect( spaceTexture, light );
 			
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF() ));
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new SKYBOX_ATF() ));
 			
 			_oimoWorld = new Zest3DOimoWorld(30);
 			

@@ -24,10 +24,10 @@ package plugin.screens.screen01
 		private var _particles:ParticleGeometry;
 		override protected function initialize():void 
 		{
-			skybox = new SkyboxGeometry( TextureCube.fromByteArray( new SKYBOX_ATF() ) );
+			skybox = new SkyboxGeometry( TextureCube.fromATFData( new SKYBOX_ATF() ) );
 			camera.position = new APoint( 0, 0, -8 );
 			
-			var particleTexture:Texture2D = Texture2D.fromByteArray( new ParticleATF() );
+			var particleTexture:Texture2D = Texture2D.fromATFData( new ParticleATF() );
 			var particleEffect:TextureEffect = new TextureEffect( particleTexture );
 			
 			var numParticles:int = 1000;

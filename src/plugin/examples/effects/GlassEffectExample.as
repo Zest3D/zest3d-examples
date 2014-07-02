@@ -25,7 +25,7 @@ package plugin.examples.effects
 		{
 			addChild( new Stats() );
 			
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SkyboxATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SkyboxATF() );
 			var glassEffect:GlassEffect = new GlassEffect( skyTexture );
 			
 			_torus0 = new TorusPrimitive( glassEffect, false, true, false, false, 64, 32 );

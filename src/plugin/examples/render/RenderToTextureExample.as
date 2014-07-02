@@ -48,7 +48,7 @@ package plugin.examples.render
 			// create a render target with 1 texture
 			//_renderTarget = new RenderTarget( 1, TextureFormat.RGBA8888, rtWidth, rtHeight, false, false );
 			
-			var effect:TextureEffect = new TextureEffect( Texture2D.fromByteArray( new CHECKED_ATF() ) );
+			var effect:TextureEffect = new TextureEffect( Texture2D.fromATFData( new CHECKED_ATF() ) );
 			var torus:TorusPrimitive = new TorusPrimitive( effect, true, false );
 			scene.addChild( torus );
 			

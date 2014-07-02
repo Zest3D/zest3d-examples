@@ -48,7 +48,7 @@ package plugin.examples.picking
 			_tf.selectable = false;
 			addChild( _tf );
 			
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
 			
 			var light:Light = new Light();
 			light.ambient = new Color( 0.05, 0.07, 0.2 );

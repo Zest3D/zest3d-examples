@@ -54,7 +54,7 @@ package plugin.examples.terrain
 			light.specular = new Color( 0.46, 0.21, 0.21 );
 			light.exponent = 1;
 			
-			var texture:Texture2D = Texture2D.fromByteArray( new SPACE_ATF() );
+			var texture:Texture2D = Texture2D.fromATFData( new SPACE_ATF() );
 			
 			var effect:PhongEffect = new PhongEffect( texture, light );
 			
@@ -70,7 +70,7 @@ package plugin.examples.terrain
 			
 			scene.addChild( _terrain );
 			
-			var skyboxTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
+			var skyboxTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			skybox = new SkyboxGeometry( skyboxTexture );
 			
 			_textfield = new TextField();

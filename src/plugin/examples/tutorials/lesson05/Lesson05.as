@@ -18,7 +18,7 @@ package plugin.examples.tutorials.lesson05
 		
 		override protected function initialize():void 
 		{
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			var reflectionEffect:ReflectionEffect = new ReflectionEffect( skyTexture );
 			
 			skybox = new SkyboxGeometry( skyTexture );

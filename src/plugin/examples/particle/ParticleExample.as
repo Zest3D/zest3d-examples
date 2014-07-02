@@ -25,7 +25,7 @@ package plugin.examples.particle
 			addChild( new Stats() );
 			camera.position = new APoint( 0, 0, -8 );
 			
-			var particleTexture:Texture2D = Texture2D.fromByteArray( new ParticleATF() );
+			var particleTexture:Texture2D = Texture2D.fromATFData( new ParticleATF() );
 			var particleEffect:TextureEffect = new TextureEffect( particleTexture );
 			
 			var numParticles:int = 500;

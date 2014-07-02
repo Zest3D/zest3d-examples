@@ -24,11 +24,11 @@ package plugin.examples.tutorials.lesson04
 		
 		override protected function initialize():void 
 		{
-			var skyTexture:TextureCube = TextureCube.fromByteArray( new SKYBOX_ATF() );
+			var skyTexture:TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			var reflectionEffect:ReflectionEffect = new ReflectionEffect( skyTexture );
 			skybox = new SkyboxGeometry( skyTexture );
 			
-			var checkedTexture:Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
+			var checkedTexture:Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
 			var texture2DEffect:TextureEffect = new TextureEffect( checkedTexture );
 			var plane:PlanePrimitive = new PlanePrimitive( texture2DEffect, true, false );
 			

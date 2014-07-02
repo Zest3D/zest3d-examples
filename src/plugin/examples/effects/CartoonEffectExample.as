@@ -39,8 +39,8 @@ package plugin.examples.effects
 			var parser:ParserAdapter3DS = new ParserAdapter3DS( new DANCER_3DS(), true, true );
 			parser.parse();
 			
-			var checkedTexture: Texture2D = Texture2D.fromByteArray( new CHECKED_ATF() );
-			var gradientTexture: Texture2D = Texture2D.fromByteArray( new GRADIENT() );
+			var checkedTexture: Texture2D = Texture2D.fromATFData( new CHECKED_ATF() );
+			var gradientTexture: Texture2D = Texture2D.fromATFData( new GRADIENT() );
 			
 			var light:Light = new Light( LightType.POINT );
 			light.position = new APoint( 1, -10, -5 );

@@ -15,7 +15,7 @@ package plugin.examples.tutorials.lesson01
 		
 		override protected function initialize():void 
 		{
-			var texture:Texture2D = Texture2D.fromByteArray(new CHECKED_ATF());
+			var texture:Texture2D = Texture2D.fromATFData(new CHECKED_ATF());
 			var effect:TextureEffect = new TextureEffect(texture);
 			_torus = new TorusPrimitive(effect, true, false);
 			scene.addChild(_torus);
