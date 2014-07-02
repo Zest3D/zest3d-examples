@@ -1,4 +1,4 @@
-zest3d-examples-fp11
-====================
+zest3d-examples
+===============
 
 Examples for Zest3D
