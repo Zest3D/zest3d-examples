@@ -1,11 +1,17 @@
 package plugin.examples.render 
 {
+	import flash.display.Bitmap;
+	import flash.display3D.Context3DTextureFormat;
+	import flash.display3D.textures.RectangleTexture;
 	import plugin.core.graphics.Color;
 	import plugin.core.interfaces.IDisposable;
 	import zest3d.applications.Zest3DApplication;
+	import zest3d.localeffects.MRTEffect;
+	import zest3d.localeffects.RenderTargetEffect;
 	import zest3d.localeffects.TextureEffect;
 	import zest3d.primitives.CubePrimitive;
 	import zest3d.primitives.TorusPrimitive;
+	import zest3d.renderers.stage3d.Stage3DRenderer;
 	import zest3d.resources.enum.AttributeType;
 	import zest3d.resources.enum.AttributeUsageType;
 	import zest3d.resources.enum.TextureFormat;
@@ -46,16 +52,14 @@ package plugin.examples.render
 			_screenCamera = ScreenTarget.createCamera();
 			
 			// create a render target with 1 texture
-			//_renderTarget = new RenderTarget( 1, TextureFormat.RGBA8888, rtWidth, rtHeight, false, false );
+			_renderTarget = new RenderTarget( 1, TextureFormat.RGBA8888, rtWidth, rtHeight, false, false );
 			
 			var effect:TextureEffect = new TextureEffect( Texture2D.fromATFData( new CHECKED_ATF() ) );
 			var torus:TorusPrimitive = new TorusPrimitive( effect, true, false );
 			scene.addChild( torus );
 			
-			/*
-			var textureEffect:TextureEffect = new TextureEffect( _renderTarget.getColorTextureAt( 0 ) );
-			scene.addChild( cube );
-			*/
+			var targetEffect:RenderTargetEffect = new RenderTargetEffect( _renderTarget.getColorTextureAt( 0 ) );
+			_screenPolygon.effect = targetEffect;
 		}
 		
 		override public function onIdle():void 
@@ -75,24 +79,23 @@ package plugin.examples.render
 			
 			if ( _renderer.preDraw() )
 			{
-				/*
 				// Draw the scene to a render target.
 				renderer.enableRenderTarget( _renderTarget );
 				renderer.clearColor = new Color( 1, 1, 1, 1 );
 				renderer.clearBuffers();
 				renderer.drawVisibleSet( _culler.visibleSet );
 				renderer.disableRenderTarget( _renderTarget );
-				*/
 				
 				// Draw the scene to the main window and also to a regular screen
 				// polygon, placed in the lower-left corner of the main window.
-				//renderer.clearColor = new Color( 0.2, 0.2, 0.2, 1 );
+				renderer.clearColor = new Color( 0.2, 0.2, 0.2, 1 );
 				renderer.clearBuffers();
 				renderer.drawVisibleSet( _culler.visibleSet );
-				//renderer.camera = _screenCamera;
-				//renderer.drawVisual( _screenPolygon );
 				
-				//renderer.camera = camera;
+				renderer.camera = _screenCamera;
+				renderer.drawVisual( _screenPolygon );
+				
+				renderer.camera = camera; // restore the camera
 				renderer.postDraw();
 				renderer.displayColorBuffer();
 			}
