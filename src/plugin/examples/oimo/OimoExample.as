@@ -8,9 +8,8 @@ package plugin.examples.oimo
 	import plugin.core.graphics.Color;
 	import plugin.math.algebra.APoint;
 	import plugin.utils.Stats;
-	import plugin.examples.oimo.helpers.OimoMesh3D;
-	import plugin.examples.oimo.helpers.Zest3DOimoWorld;
 	import zest3d.applications.Zest3DApplication;
+	import zest3d.ext.oimo.OimoWorld;
 	import zest3d.localeffects.PhongEffect;
 	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.primitives.CubePrimitive;
@@ -36,7 +35,7 @@ package plugin.examples.oimo
 		[Embed(source="../../../assets/atf/space.atf", mimeType="application/octet-stream")]
 		private const SPACE_ATF:Class;
 		
-		private var _oimoWorld:Zest3DOimoWorld;
+		private var _oimoWorld:OimoWorld;
 		
 		override protected function initialize():void 
 		{
@@ -65,7 +64,7 @@ package plugin.examples.oimo
 			var skyboxTexture:TextureCube = TextureCube.fromATFData( new SkyboxTexture() );
 			
 			// Oimo
-			_oimoWorld = new Zest3DOimoWorld( 30 );
+			_oimoWorld = new OimoWorld( 30 );
 			
 			// Add Ground
 			var plane:CubePrimitive = new CubePrimitive( spaceEffect, true, true, false, false, 10, 10, 10 );
