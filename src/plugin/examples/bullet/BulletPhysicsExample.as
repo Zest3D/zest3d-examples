@@ -39,6 +39,7 @@ package plugin.examples.bullet
 			
 			world = BulletDynamicsWorld.getInstance();
 			world.initWithDbvtBroadphase();
+			world.gravity = new AVector(0, 20, 0);
 			
 			floorMesh = new CubePrimitive(effect, true, false, false, false );
 			floorMesh.scale( 500, 5, 500 );
@@ -64,9 +65,11 @@ package plugin.examples.bullet
 			
 			var cubeShape:BulletBoxShape = new BulletBoxShape(10000, 10000, 10000);
 			var cubeRigidBody:BulletRigidBody = new BulletRigidBody(cubeShape, cubeMesh, 1);
-			world.addRigidBody(cubeRigidBody);
-			cubeRigidBody.friction = 1;
+			cubeRigidBody.friction = 0.9;
 			cubeRigidBody.position = new AVector(Math.random() * 6000 - 3000, Math.random() * -60000 , Math.random() * 6000 - 3000);
+			cubeRigidBody.ccdSweptSphereRadius = 0.5;
+			cubeRigidBody.ccdMotionThreshold = 1;
+			world.addRigidBody(cubeRigidBody);
 			
 			return super.onMouseDown(e);
 		}

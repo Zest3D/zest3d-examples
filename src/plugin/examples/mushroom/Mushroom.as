@@ -29,9 +29,6 @@ package plugin.examples.mushroom
 		[Embed(source="../../../assets/audio/Overworld_Theme.mp3")]
 		private const MARIO_SND:Class;
 		
-		[Embed(source = "../../../assets/png/zest_logo.png")]
-		private const ZEST_LOGO_PNG:Class;
-		
 		[Embed(source = "../../../assets/atfcube/rock_water.atf", mimeType = "application/octet-stream")]
 		private const SKYBOX_ATF:Class;
 		
@@ -109,24 +106,7 @@ package plugin.examples.mushroom
 			_soundChannel = new SoundChannel();
 			_soundChannel = audio.play(0, 9999);
 			
-			var logo:Sprite = new Sprite();
-			var logoBmp:Bitmap = new ZEST_LOGO_PNG();
-			logo.addChild( logoBmp );
-			
-			logo.width = logo.height = 100;
-			logo.x = 5;
-			logo.y = 8;
-			logo.addEventListener( MouseEvent.CLICK, onLogoClick );
-			logo.buttonMode = true;
-			addChild( logo );
-			
 			initializeCameraMotion( 0.7, 0.05 );
-		}
-		
-		private function onLogoClick(e:MouseEvent ):void
-		{
-			var request:URLRequest = new URLRequest("http://www.zest3d.com");
-			navigateToURL(request, "_blank");
 		}
 		
 		override protected function update(appTime:Number):void 
@@ -139,7 +119,7 @@ package plugin.examples.mushroom
 					if ( _models[i][j] )
 					{
 						_models[i][j].scaleUniform = ((_soundChannel.leftPeak + _soundChannel.rightPeak) / 2) + 0.7;
-						_models[i][j].z = Math.sin( (appTime * 0.001) + j%(i+j+1) );
+						_models[i][j].z = Math.sin( appTime + j%(i+j+1) );
 					}
 				}
 			}

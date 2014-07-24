@@ -2,21 +2,17 @@ package plugin.examples.controllers
 {
 	import flash.utils.ByteArray;
 	import flash.utils.Endian;
-	import plugin.core.graphics.Color;
-	import plugin.core.interfaces.IDisposable;
+	import flash.utils.getTimer;
 	import plugin.core.system.Assert;
 	import plugin.math.algebra.APoint;
 	import plugin.math.algebra.HMatrix;
 	import plugin.math.algebra.HQuaternion;
 	import plugin.utils.Stats;
-	import zest3d.applications.AGALApplication;
-	import zest3d.applications.Game;
 	import zest3d.applications.Zest3DApplication;
 	import zest3d.controllers.enum.RepeatType;
 	import zest3d.controllers.KeyframeController;
 	import zest3d.controllers.SkinController;
 	import zest3d.datatypes.Transform;
-	import zest3d.geometry.SkyboxGeometry;
 	import zest3d.localeffects.ReflectionEffect;
 	import zest3d.resources.enum.AttributeType;
 	import zest3d.resources.enum.AttributeUsageType;
@@ -42,7 +38,7 @@ package plugin.examples.controllers
 		private const Biped: Class;
 		
 		private var _animTime: Number = 0.0;
-		private var _animTimeDelta: Number = 0.03;
+		private var _animTimeDelta: Number = 0.3;
 		
 		protected var _vFormat: VertexFormat;
 		
@@ -331,7 +327,7 @@ package plugin.examples.controllers
 					break;
 			}
 			
-			keyframeController.repeat = RepeatType.WRAP;
+			keyframeController.repeat = RepeatType.WRAP; // TODO remove hard coding
 			keyframeController.minTime = minTime;
 			keyframeController.maxTime = maxTime;
 			keyframeController.phase = phase;
@@ -544,8 +540,6 @@ package plugin.examples.controllers
 			var texture: TextureCube = TextureCube.fromATFData( new SKYBOX_ATF() );
 			mesh.effect = new ReflectionEffect( texture );
 			
-			//skybox = new SkyboxGeometry( texture );
-			
 			return mesh;
 		}
 		
@@ -553,7 +547,7 @@ package plugin.examples.controllers
 		{
 			_animTime += _animTimeDelta;
 			_culler.computeVisibleSet( scene );
-			scene.update( appTime );
+			scene.update( _animTime );
 		}
 		
 	}
